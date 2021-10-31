@@ -9,7 +9,7 @@ import './header.scss'
 
 const Header = props => {
     return (
-        <div className="header">
+        <header className="header">
             <Container>
                 <div className="header__wrapper">
                     <Link to="/" className="header__logo">
@@ -17,10 +17,10 @@ const Header = props => {
                     </Link>
                     {/* End logo */}
 
-                    <Link to="/registration" className="header__reg-link">Registration</Link>
+                    <Link to="/registration" className="header__reg-link">Register</Link>
                 </div>
             </Container>
-        </div>
+        </header>
     )
 }
 

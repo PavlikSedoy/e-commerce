@@ -6,11 +6,11 @@ import './footer.scss'
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <footer className="footer">
             <Container>
                 copyright
             </Container>
-        </div>
+        </footer>
     )
 }
 

@@ -21,12 +21,14 @@ $header-regLink--hoverColor: #0d7851;
     }
 
     &__logo-img {
-        height: 8rem;
+        height: 6.5rem;
     }
 
     &__reg-link {
         color: $header-regLink--color;
         font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 700;
     }
 
     &__reg-link:hover {
