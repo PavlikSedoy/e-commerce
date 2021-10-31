@@ -1,11 +1,15 @@
 import React from 'react'
 
+import Container from '../Container/Container'
+
 import './footer.scss'
 
 const Footer = () => {
     return (
         <div className="footer">
-            copyright
+            <Container>
+                copyright
+            </Container>
         </div>
     )
 }

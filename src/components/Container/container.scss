@@ -1,0 +1,7 @@
+$container-maxWidthXXL: 1200px !default;
+
+.container {
+    width: 100%;
+    max-width: $container-maxWidthXXL;
+    margin: auto;
+}

@@ -1,18 +1,32 @@
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
+
 import './default.scss'
 
+import MainLayout from './layouts/MainLayout/MainLayout'
 import Homepage from './pages/Homepage/Homepage'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+import Registration from './pages/Registration/Registration'
 
 const App = () => {
   return (
-    <div className="app">
-      <Header />
-      <div className="app__wrapper">
-        <Homepage />
-      </div>
-      <Footer />
-    </div>
+    <Router>
+        <Switch>
+          <Route path="/" exact render={() => (
+            <MainLayout>
+              <Homepage />
+            </MainLayout>
+          )} />
+          <Route path="/registration" render={() => (
+            <MainLayout>
+              <Registration />
+            </MainLayout>
+          )} />
+        </Switch>
+    </Router>
   )
 }
 
