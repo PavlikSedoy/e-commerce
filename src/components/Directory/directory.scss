@@ -1,0 +1,65 @@
+.directory {
+    display: flex;
+    height: 100%;
+    
+    &__type {
+        position: relative;
+        overflow: hidden;
+        flex-basis: 50%;
+        min-height: calc(100vh - 12rem);
+    }
+
+    &__img {
+        position: absolute;
+        max-width: initial;
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0,0,0);
+        opacity: .7;
+        transition: .3s ease;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: 2px solid #fff;
+        padding: 0.5rem 1rem;
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: #fff;
+        transition: .3s ease;
+    }
+
+    // Hover
+    &__type:hover {
+        .directory {
+            &__bg {
+                opacity: .3;
+            }
+            
+            &__btn {
+                background: #fff;
+                color: #000;
+            }
+        }
+        // End
+    }
+
+    &__btn:hover {
+        cursor: pointer;
+    }
+}
