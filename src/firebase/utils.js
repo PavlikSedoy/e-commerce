@@ -10,7 +10,15 @@ export const firestore = firebase.firestore()
 
 const GoogleProvider = new firebase.auth.GoogleAuthProvider()
 GoogleProvider.setCustomParameters({ promt: 'select_account' })
-export const signInWithGoogle = () => auth.signInWithPopup( GoogleProvider )
+export const signInWithGoogle = async () => {
+    try {
+        await auth.signInWithPopup( GoogleProvider )
+    } catch(err) {
+        // WILL DO REDIRECT TO ERROR PAGE!
+        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        console.error(err)
+    }
+}
 
 export const handleUserProfile = async (userAuth, additionalData) => {
     if (!userAuth) return
