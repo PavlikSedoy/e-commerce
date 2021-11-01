@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer'
 const MainLayout = props => {
     return (
         <div className="app">
-            <Header />
+            <Header {...props} />
             <div className="app__wrapper">
                 {props.children}
             </div>

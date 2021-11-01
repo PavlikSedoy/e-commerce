@@ -24,14 +24,22 @@ $header-regLink--hoverColor: #0d7851;
         height: 6.5rem;
     }
 
+    // User controls
+    &__user-control {
+        display: flex;
+        gap: 1rem;
+    }
+
     &__reg-link {
         color: $header-regLink--color;
         font-size: 1.6rem;
         text-transform: uppercase;
         font-weight: 700;
+        cursor: pointer;
     }
 
     &__reg-link:hover {
         color: $header-regLink--hoverColor;
     }
+    // End user controls
 }
