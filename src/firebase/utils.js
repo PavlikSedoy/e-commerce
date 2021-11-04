@@ -2,12 +2,15 @@ import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
 import 'firebase/compat/auth'
 import { firebaseConfig } from './config'
+import { getAuth } from 'firebase/auth'
 
 firebase.initializeApp(firebaseConfig)
 
 export const auth = firebase.auth()
 export const firestore = firebase.firestore()
+export const getAuthF = getAuth()
 
+// Google auth
 const GoogleProvider = new firebase.auth.GoogleAuthProvider()
 GoogleProvider.setCustomParameters({ promt: 'select_account' })
 export const signInWithGoogle = async () => {
@@ -19,6 +22,20 @@ export const signInWithGoogle = async () => {
         console.error(err)
     }
 }
+// End google auth
+
+// Facebook auth
+const FacebookProvider = new firebase.auth.FacebookAuthProvider()
+FacebookProvider.setCustomParameters({'display': 'popup'})
+
+export const signInWithFacebook = async () => {
+    try {
+        await auth.signInWithPopup( FacebookProvider )
+    } catch(err) {
+        console.error(err)
+    }
+}
+// End Facebook auth
 
 export const handleUserProfile = async (userAuth, additionalData) => {
     if (!userAuth) return

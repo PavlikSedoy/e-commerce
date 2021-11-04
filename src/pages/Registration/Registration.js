@@ -1,13 +1,9 @@
 import React from 'react'
 
-import Container from '../../components/Container/Container'
+import Signup from '../../components/Signup/Signup'
 
 const Registration = () => {
-    return (
-        <Container>
-            <h1>Registration page</h1>
-        </Container>
-    )
+    return <Signup />
 }
 
 export default Registration
